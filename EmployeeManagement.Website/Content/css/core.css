@@ -1,0 +1,11 @@
+﻿* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+}
+footer{
+    padding-top:50px;
+}

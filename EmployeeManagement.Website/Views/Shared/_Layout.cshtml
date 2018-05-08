@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html ng-app="employee">
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Optimize mobile viewport -->
+    <title>Employee Hierarchy</title>
+    <!-- SCROLLS -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <!-- SPELLS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    @Styles.Render("~/content/css/core.css")
+    @Scripts.Render("~/scripts/app/core.js")
+    @RenderSection("head", required: false)
+
+</head>
+<body>
+    <!-- HEADER AND NAVBAR -->
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">Employee Hierarchy</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer class="text-center small">
+        <p>&copy; @DateTime.Now.Year EmployeeManagement</p>
+    </footer>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

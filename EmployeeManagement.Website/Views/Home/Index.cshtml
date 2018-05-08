@@ -1,0 +1,50 @@
+﻿@section head {
+    @Styles.Render("~/content/css/home.css")
+}
+
+<div ng-controller="empController">
+    <div id="main" ng-init="initEmployeeTable()">
+
+        <div class="row col-xs-6">
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Employee Name</td>
+                            <td>Id</td>
+                            <td>Manager Id</td>
+
+                        </tr>
+                    </thead>
+                    <tr ng-repeat="x in employeeData">
+                        <td>{{ x.Name }}</td>
+                        <td>{{ x.Id }}</td>
+                        <td>{{ x.ManagerID }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="row col-xs-6">
+            <table>
+                <thead>
+                    <tr>
+                        <td>Employee Name</td>
+                        <td>Id</td>
+                        <td>Manager Id</td>
+
+                    </tr>
+                </thead>
+                <tr ng-repeat="x in employeeData">
+                    <td>{{ x.Name }}</td>
+                    <td>{{ x.Id }}</td>
+                    <td>{{ x.ManagerID }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+@section scripts {
+    @Scripts.Render("~/scripts/app/services/employee.js")
+    @Scripts.Render("~/scripts/app/controller/employee.js")
+}
